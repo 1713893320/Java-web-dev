@@ -1,35 +1,19 @@
 <%--
   Created by IntelliJ IDEA.
-  User: mqxu
+  User: asus
   Date: 2019/9/17
   Time: 15:12
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
+  <head>
     <title>首页</title>
-</head>
-<body>
-<h2>首页</h2>
-<ul>
-<%--    <li>--%>
-<%--        服务器端跳转的用户名--%>
-<%--        <%=request.getAttribute("username")%>--%>
-<%--        服务器端跳转的密码--%>
-<%--        <%=request.getAttribute("password")%>--%>
-<%--    </li>--%>
-
-    <li>
-        <a href="person.jsp">个人中心</a>
-    </li>
-
-    <li>
-    客户端跳转的用户名：<%=session.getAttribute("username")%>
-    客户端跳转的密码：<%=session.getAttribute("password")%>
-</li>
-</ul>
-<br>
-<a href="login.html">点击返回登陆</a>
-</body>
+  </head>
+  <body>
+  首页
+  <h3>用户名：${pageContext.request.getAttribute("username")}</h3>
+  <h3>密码：${pageContext.request.getAttribute("username")}</h3>
+  <a href="login.html" target="_blank">点击返回</a>
+  </body>
 </html>

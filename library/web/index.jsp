@@ -156,6 +156,9 @@
           pageContext.setAttribute("username",username);
       %>
       ${username}
+      <li>
+        <a href="logout.jsp">退出</a>
+      </li>
       <%
       }else{
       %>
