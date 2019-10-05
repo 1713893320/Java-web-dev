@@ -5,10 +5,10 @@ public class Book {
     private String cover;
     private String auther;
 
-    public Book(String name, String cover, String auther) {
+    Book(String name, String cover, String author) {
         this.name = name;
         this.cover = cover;
-        this.auther = auther;
+        this.auther = author;
     }
 
     public Book(String name) {
@@ -31,12 +31,12 @@ public class Book {
         this.cover = cover;
     }
 
-    public String getAuther() {
+    public String getAuthor() {
         return auther;
     }
 
-    public void setAuther(String auther) {
-        this.auther = auther;
+    public void setAuthor(String author) {
+        this.auther = author;
     }
 
     @Override
@@ -44,7 +44,7 @@ public class Book {
         return "Book{" +
                 "name='" + name + '\'' +
                 ", cover='" + cover + '\'' +
-                ", auther='" + auther + '\'' +
+                ", author='" + auther + '\'' +
                 '}';
     }
 }
