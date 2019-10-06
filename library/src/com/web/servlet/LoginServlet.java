@@ -1,4 +1,4 @@
-package com.web;
+package com.web.servlet;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
