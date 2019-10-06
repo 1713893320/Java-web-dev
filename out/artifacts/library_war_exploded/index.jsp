@@ -1,5 +1,3 @@
-<%@ page import="java.util.List" %>
-<%@ page import="com.web.Book" %>
 <%--
   Created by IntelliJ IDEA.
   User: asus
@@ -7,11 +5,19 @@
   Time: 21:38
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="com.web.entity.User" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.web.entity.Book" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
     <title>首页</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" type="text/css">
     <style type="text/css">
+      h2,h3{
+        color: rgb(73,73,73);
+      }
+
       *{
         margin: 0;
         padding: 0;
@@ -128,27 +134,16 @@
   </head>
   <body>
   <!--顶部导航 -->
-  <header>
-    <div>
-      <!--导航-->
-      <ul class="nav">
-        <li>
-          <a href="">首页</a>
-        </li>
-        <li>
-          <a href="">畅销</a>
-        </li>
-        <li>
-          <a href="">购物车</a>
-        </li>
-        <li>
-          <a href="">客服</a>
-        </li>
-        <li>
-          <a href="">书城</a>
-        </li>
-      </ul>
+  <div id="top">
+    <jsp:include page="top.jsp"/>
+  </div>
+  <div id="search">
+    <h2>读书时刻</h2>
+    <input type="text" placeholder="书名、作者、ISBN" class="search-input">
+    <div class="search-btn">
+      <img src="images/search.png" alt="">
     </div>
+  </div>
     <div>
       <%
         String username = (String) session.getAttribute("username");
@@ -205,7 +200,18 @@
   </div>
   <!--脚注区-->
   <footer>
-    <p>南京工业职业技术学院</p>
+    <ul>
+      <li>@2015-2019</li>
+      <li>niit.edu.cn,</li>
+      <li>all rights reserved</li>
+      <li>南工院计算机学院</li>
+    </ul>
+    <ul>
+      <li>联系我们</li>
+      <li>帮助中心</li>
+      <li>法律声明</li>
+      <li>移动合作</li>
+    </ul>
   </footer>
 
   </body>
